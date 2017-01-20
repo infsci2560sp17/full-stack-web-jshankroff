@@ -5,11 +5,11 @@ TODO : Please provide a detailed project description.
 ## Build status
 
 TODO : Modify to match your project specific Travis Build
-[![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web)
+[![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-jshankroff)
 
 ## Web Site
 
-[[My Web Site Name](https://whispering-tundra-49243.herokuapp.com)
+[My Web Site Name](https://whispering-tundra-49243.herokuapp.com)
 
 ## Key Features
 
