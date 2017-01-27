@@ -9,7 +9,7 @@ TODO : Modify to match your project specific Travis Build
 
 ## Web Site
 
-[My Web Site Name](https://whispering-tundra-49243.herokuapp.com)
+[Tennis Collaborating by Jordan Shankroff](https://whispering-tundra-49243.herokuapp.com)
 
 ## Key Features
 
