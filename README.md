@@ -19,7 +19,7 @@ TODO : Modify to match your project specific Travis Build
 
 ## Web Site
 
-[Tennis Collaborating by Jordan Shankroff](https://whispering-tundra-49243.herokuapp.com)
+[TennisCollab](https://whispering-tundra-49243.herokuapp.com)
 
 ## Key Features
 
