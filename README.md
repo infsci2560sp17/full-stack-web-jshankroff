@@ -17,6 +17,9 @@
 TODO : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-jshankroff)
 
+## Changelog
+[Changelog](CHANGELOG.md)
+
 ## Web Site
 
 [TennisCollab](https://whispering-tundra-49243.herokuapp.com)
