@@ -1,7 +1,7 @@
 # TODO : Your Project Name
 
 1.	What is the proposed name for your Web application?
-	-TennisCollab
+	- TennisCollab
 2.	Who is the target audience for your Web application?
 	-Primary audience is tennis players, with a secondary audience of those interested in watching or playing the sport, and there is a tertiary audience, which could include general sports enthusiasts that don’t play but want to find information on it.
 3.	What problem is it intended to solve for the target audience?
