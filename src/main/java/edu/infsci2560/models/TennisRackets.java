@@ -23,34 +23,36 @@ public class TennisRackets {
 
     private static final long serialVersionUID = 1L;
 
-    public enum WorkoutType {
+    public enum RacketType {
         Unknown,
-        Strength,
-        Cardio,
-        CrossTrain
+        Wilson,
+        Babolat,
+        Head,
+        Yonex,
+        Prince,
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String title;
-    protected WorkoutType workoutType;
+    protected RacketType racketType;
 
     public TennisRackets() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.workoutType = WorkoutType.Unknown;
+        this.racketType = RacketType.Unknown;
     }
 
-    public TennisRackets(Long id, String name, WorkoutType workoutType) {
+    public TennisRackets(Long id, String name, RacketType racketType) {
         this.id = id;
         this.title = name;
-        this.workoutType = workoutType;
+        this.racketType = racketType;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.workoutType + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", racketType=" + this.racketType + " ]";
     }
 
     @Override
@@ -80,15 +82,15 @@ public class TennisRackets {
     /**
      * @return the workoutType
      */
-    public WorkoutType getWorkoutType() {
-        return workoutType;
+    public RacketType getRacketType() {
+        return racketType;
     }
 
     /**
      * @param workoutType the workoutType to set
      */
-    public void setWorkoutType(WorkoutType workoutType) {
-        this.workoutType = workoutType;
+    public void setRacketType(RacketType racketType) {
+        this.racketType = racketType;
     }
 
     /**
