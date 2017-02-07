@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Home</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Rackets!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Racket Type</th>
+                </tr>                
+                <tr data-th-each="racket : ${rackets}">
+                    <td data-th-text="${racket.id}"></td>
+                    <td data-th-text="${racket.title}"></td>
+                    <td data-th-text="${racket.racketType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add DVD<br />
+        <form data-th-action="@{/rackets/add}" name="addRacketForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Workout Type:<br />
+            <input type="radio" name="racketType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="racketType" value="Wilson" /> Strength<br />
+            <input type="radio" name="racketType" value="Babolat" /> Cardio<br />
+            <input type="radio" name="racketType" value="Head" /> CrossTrain<br />
+            <input type="radio" name="racketType" value="Yonex" /> CrossTrain<br />
+            <input type="radio" name="racketType" value="Prince" /> CrossTrain<br />
+            <input type="submit" value="Add Racket"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
