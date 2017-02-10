@@ -34,9 +34,9 @@ public class RacketController {
         return new ModelAndView("rackets", "rackets", repository.findAll());
     }
     
-    @RequestMapping(value = "dvds/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    @RequestMapping(value = "rackets/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid TennisRackets tennisrackets, BindingResult result) {
-        repository.save(rackets);
+        repository.save(tennisrackets);
         return new ModelAndView("rackets", "rackets", repository.findAll());
     }
     
