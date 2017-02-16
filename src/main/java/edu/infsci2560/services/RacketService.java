@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author kolobj
  */
 @RestController
-@RequestMapping("/public/api/dvds")
+@RequestMapping("/public/api/rackets")
 public class RacketService {
 
     @Autowired
