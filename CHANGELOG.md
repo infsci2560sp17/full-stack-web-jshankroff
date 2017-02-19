@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 
+## [1.3] - 2017-01-28
+### Added
+- Created entity
+- Created repository
+- Created RESTful web service and return JSON
+- Created an MVC Controller and implement get and post methods
+- Created an MVC Page and wired it to my Repository
+- Modified README.md
+- Modified CHANGELOG.md
+- Added CSS sheet for home.html
+
 ## [1.2] - 2017-01-28
 ### Added
 - Answered "What is the proposed name for your Web application?"
