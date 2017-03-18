@@ -6,12 +6,12 @@
  */
 package edu.infsci2560.repositories;
 
-import edu.infsci2560.models.TennisRackets;
+import edu.infsci2560.models.TennisStrings;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
  *
  * @author jshankroff
  */
-public interface RacketRepository extends PagingAndSortingRepository<TennisRackets, Long> {}
+public interface StringRepository extends PagingAndSortingRepository<TennisStrings, Long> {}
 

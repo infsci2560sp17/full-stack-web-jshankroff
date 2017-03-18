@@ -22,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
- * @author kolobj
+ * @author jshankroff
  */
 @Controller
 public class RacketController {

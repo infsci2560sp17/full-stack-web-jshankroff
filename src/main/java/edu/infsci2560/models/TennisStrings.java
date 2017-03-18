@@ -1,6 +1,7 @@
 package edu.infsci2560.models;
 
 
+
     /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,43 +17,51 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *
- * @author jshankroff
+ * @author kolobj
  */
 @Entity
-public class TennisRackets {
+public class TennisStrings {
 
     private static final long serialVersionUID = 1L;
 
-    public enum RacketType {
+    public enum StringType {
         Unknown,
-        Wilson,
+        Kirschbaum,
         Babolat,
         Head,
         Yonex,
         Prince,
+        Technifibre,
+        Ashaway,
+        Luxilon,
+        Solinco,
+        Dunlop,
+        Gamma,
+        Forten,
+        Gosen,
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String title;
-    protected RacketType racketType;
+    protected StringType stringType;
 
-    public TennisRackets() {
+    public TennisStrings() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.racketType = RacketType.Unknown;
+        this.stringType = stringType.Unknown;
     }
 
-    public TennisRackets(Long id, String name, RacketType racketType) {
+    public TennisStrings(Long id, String name, StringType stringType) {
         this.id = id;
         this.title = name;
-        this.racketType = racketType;
+        this.stringType = stringType;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", racketType=" + this.racketType + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", stringType=" + this.stringType + " ]";
     }
 
     @Override
@@ -80,17 +89,17 @@ public class TennisRackets {
     }
 
     /**
-     * @return the workoutType
+     * @return the stringType
      */
-    public RacketType getRacketType() {
-        return racketType;
+    public StringType getStringType() {
+        return stringType;
     }
 
     /**
      * @param workoutType the workoutType to set
      */
-    public void setRacketType(RacketType racketType) {
-        this.racketType = racketType;
+    public void setRacketType(StringType stringType) {
+        this.stringType = stringType;
     }
 
     /**
@@ -108,3 +117,4 @@ public class TennisRackets {
     }
 
 }
+
