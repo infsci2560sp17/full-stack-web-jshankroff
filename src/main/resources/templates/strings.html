@@ -4,7 +4,7 @@
         <title>User Home</title>
     </head>
     <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Rackets!</h1>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Strings!</h1>
 
         <div>
             <table style="border: 1px solid black">
@@ -22,10 +22,10 @@
         </div>
         
         <hr />
-        Add Racket<br />
+        Add String<br />
         <form data-th-action="@{/strings/add}" name="addStringForm" method="post">
             Title: <input type="text" name="title" /><br />
-            Racket Type:<br />
+            String Type:<br />
             <input type="radio" name="stringType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="stringType" value="Wilson" /> Wilson<br />
             <input type="radio" name="stringType" value="Babolat" /> Babolat<br />
