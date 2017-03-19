@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Home</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Rackets!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>String Type</th>
+                </tr>                
+                <tr data-th-each="string : ${strings}">
+                    <td data-th-text="${string.id}"></td>
+                    <td data-th-text="${string.title}"></td>
+                    <td data-th-text="${string.stringType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add Racket<br />
+        <form data-th-action="@{/strings/add}" name="addStringForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Racket Type:<br />
+            <input type="radio" name="stringType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="stringType" value="Wilson" /> Wilson<br />
+            <input type="radio" name="stringType" value="Babolat" /> Babolat<br />
+            <input type="radio" name="stringType" value="Head" /> Head<br />
+            <input type="radio" name="stringType" value="Yonex" /> Yonex<br />
+            <input type="radio" name="stringType" value="Technifibre" /> Technifibre<br />
+            <input type="radio" name="stringType" value="Ashaway" /> Ashaway<br />
+            <input type="radio" name="stringType" value="Luxilon" /> Luxilon<br />
+            <input type="radio" name="stringType" value="Solinco" /> Solinco<br />
+            <input type="radio" name="stringType" value="Dunlop" /> Dunlop<br />
+            <input type="radio" name="stringType" value="Gamma" /> Gamma<br />
+            <input type="radio" name="stringType" value="Forten" /> Forten<br />
+            <input type="radio" name="stringType" value="Gosen" /> Gosen<br />                
+            <input type="submit" value="Add String"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
