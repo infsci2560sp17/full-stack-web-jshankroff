@@ -4,18 +4,18 @@ body{
     
 }
 
-#wrapper{
+wrapper{
     width: 100%;
     height: auto;
 }
 
-#nagivationbar{
+nagivationbar{
     width: 100%;
     height: 50px;
     background-color: GGGGGG;
     position: fixed;
 }
 
-#leftdiv{
+leftdiv{
     
 }
