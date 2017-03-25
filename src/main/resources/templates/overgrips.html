@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Overgrips</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Overgrips!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Overgrip Type</th>
+                </tr>                
+                <tr data-th-each="overgrip : ${overgrips}">
+                    <td data-th-text="${overgrip.id}"></td>
+                    <td data-th-text="${overgrip.title}"></td>
+                    <td data-th-text="${overgrip.overgripType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add Overgrip<br />
+        <form data-th-action="@{/overgrips/add}" name="addOvergripForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Overgrip Type:<br />
+            <input type="radio" name="overgripType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="overgripType" value="Wilson" /> Wilson<br />
+            <input type="radio" name="overgripType" value="Babolat" /> Babolat<br />
+            <input type="radio" name="overgripType" value="Head" /> Head<br />
+            <input type="radio" name="overgripType" value="Yonex" /> Yonex<br />
+            <input type="radio" name="overgripType" value="Prince" /> Prince<br />
+            <input type="radio" name="overgripType" value="Prince" /> Dunlop<br />
+            <input type="radio" name="overgripType" value="Prince" /> Tourna<br />           
+            <input type="radio" name="overgripType" value="Prince" /> Volkl<br />
+            <input type="submit" value="Add Overgrip"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
