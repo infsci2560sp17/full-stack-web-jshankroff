@@ -23,7 +23,7 @@ public class TennisShoes {
 
     private static final long serialVersionUID = 1L;
 
-    public enum RacketType {
+    public enum ShoeType {
         Unknown,
         Nike,
         Adidas,
@@ -32,6 +32,8 @@ public class TennisShoes {
         Babolat,
         Head,
         Prince,
+        Asics,
+        KSwiss,
     }
 
     @Id
