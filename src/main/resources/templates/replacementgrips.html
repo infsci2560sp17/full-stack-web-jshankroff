@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Replacementgrips</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Replacement grips!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Replacementgrip Type</th>
+                </tr>                
+                <tr data-th-each="replacementgrip : ${replacementgrips}">
+                    <td data-th-text="${replacementgrip.id}"></td>
+                    <td data-th-text="${replacementgrip.title}"></td>
+                    <td data-th-text="${replacementgrip.replacementgripType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add Replacement grip<br />
+        <form data-th-action="@{/replacementgrips/add}" name="addReplacementgripForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Replacement grip Type:<br />
+            <input type="radio" name="replacementgripType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="replacementgripType" value="Wilson" /> Wilson<br />
+            <input type="radio" name="replacementgripType" value="Babolat" /> Babolat<br />
+            <input type="radio" name="replacementgripType" value="Head" /> Head<br />
+            <input type="radio" name="replacementgripType" value="Yonex" /> Yonex<br />
+            <input type="radio" name="replacementgripType" value="Prince" /> Prince<br />
+            <input type="radio" name="replacementgripType" value="Prince" /> Dunlop<br />
+            <input type="radio" name="replacementgripType" value="Prince" /> Tourna<br />           
+            <input type="radio" name="replacementgripType" value="Prince" /> Volkl<br />
+            <input type="radio" name="replacementgripType" value="Prince" /> Gamma<br />
+            <input type="submit" value="Add Replacementgrip"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>

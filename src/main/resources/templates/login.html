@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Spring Security Example </title>
+        <title>Login</title>
+        <link data-th-href="@{styles/style.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>        
         <div data-th-if="${param.error}">
@@ -10,10 +11,10 @@
         <div data-th-if="${param.logout}">
             You have been logged out.
         </div>
-        <form data-th-action="@{/login}" method="post">
+        <div class="login"><form data-th-action="@{/login}" method="post">
             <div><label> User Name: <input type="text" name="username"/> </label></div>
             <div><label> Password: <input type="password" name="password"/> </label></div>
             <div><input type="submit" value="Sign In"/></div>
-        </form>
+        </form></div>
     </body>
 </html>
