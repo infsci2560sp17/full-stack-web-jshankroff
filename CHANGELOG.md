@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 
+## [1.4] - 2017-03-25
+### Added
+- Created 5 additional entities
+- Created 5 additional repositories 
+- Created 5 additional RESTful services that return JSON
+- Created 5 additional MVC controllers
+- Created 5 addtional MVC pages
+- Implemented CSS and HTML for layout and style
+- Added screenshot and description on README for user input
+- Modified README.md
+- Modified CHANGELOG.md
+
 ## [1.3] - 2017-01-28
 ### Added
 - Created entity
