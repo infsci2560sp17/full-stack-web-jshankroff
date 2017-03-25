@@ -34,7 +34,9 @@
             <input type="radio" name="ballType" value="Penn" /> Penn<br />
             <input type="submit" value="Add Ball"/>
         </form>
-        
+            <form data-th-action="@{/balls/delete}" name="deleteBallForm" method="delete">
+            <input type="submit" value="Delete Ball"/>
+            </form>
         <hr />       
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
