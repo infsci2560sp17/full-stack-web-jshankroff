@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Balls</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Balls!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Ball Type</th>
+                </tr>                
+                <tr data-th-each="ball : ${balls}">
+                    <td data-th-text="${ball.id}"></td>
+                    <td data-th-text="${ball.title}"></td>
+                    <td data-th-text="${ball.ballType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add Ball<br />
+        <form data-th-action="@{/balls/add}" name="addBallForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Ball Type:<br />
+            <input type="radio" name="ballType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="ballType" value="Wilson" /> Wilson<br />
+            <input type="radio" name="ballType" value="Gamma" /> Gamma<br />
+            <input type="radio" name="ballType" value="Slazenger" /> Slazenger<br />
+            <input type="radio" name="ballType" value="Dunlop" /> Dunlop<br />
+            <input type="radio" name="ballType" value="Penn" /> Penn<br />
+            <input type="submit" value="Add Ball"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
