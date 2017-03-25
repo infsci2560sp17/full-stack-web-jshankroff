@@ -41,7 +41,7 @@ TODO : please provide a description of your landing page inluding a screen shot 
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+This user input form is a login.  The user places a username and password into the correct fields to log in to the web application![](https://cloud.githubusercontent.com/assets/25062496/24326899/d5a4f20e-118f-11e7-9c06-7ce5887cb8cf.png)
 
 ## API
 
