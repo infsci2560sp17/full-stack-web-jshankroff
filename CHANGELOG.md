@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 - Created 5 addtional MVC pages
 - Implemented CSS and HTML for layout and style
 - Added screenshot and description on README for user input
+- Edited API on README.md
 - Modified README.md
 - Modified CHANGELOG.md
 
