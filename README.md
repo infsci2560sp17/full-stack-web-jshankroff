@@ -45,20 +45,18 @@ This user input form is a login.  The user places a username and password into t
 
 ## API
 
-TODO : please provide a description of at least 1 API including a sample of request data and response data in both XML and JSON format.
-
 ### API Method 1
 
-    POST photos/:id/tags
+    POST rackets/:id/tags
 
 #### Parameters
 
-- **id** _(required)_ — The Photo ID to add tags for.
+- **id** _(required)_ — The racket ID to add tags for.
 - **tags** _(required)_ — Comma separated tags.
 
 #### Response
 
-A JSON or XMLobject containing the PhotoID and list of tags accepted.
+Returns a JSON object.
 
 #### Errors
 
