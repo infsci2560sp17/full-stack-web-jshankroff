@@ -41,5 +41,13 @@ public class BallController {
         return new ModelAndView("balls", "balls", repository.findAll());
     }
 
+@RequestMapping(value = "balls/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid TennisBalls tennisballs, BindingResult result) {
+        repository.delete(tennisballs);
+        return new ModelAndView("balls", "balls", repository.findAll());
+    }
     
 }

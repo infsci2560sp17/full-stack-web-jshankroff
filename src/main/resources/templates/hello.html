@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello World!</title>
-
+        <title>Index</title>
+<link data-th-href="@{styles/style.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+    
+    <div id="wrapper">
+    
+<!--<nav class="fixed-nav-bar">-->
+  <div class="navigationbar">
+    <a data-th-href="@{/hello}">Home</a>
+    <a data-th-href="@{/rackets}">Rackets</a>
+    <a data-th-href="@{/strings}">Strings</a>
+    <a data-th-href="@{/overgrips}">Overgrips</a>
+    <a data-th-href="@{/replacementgrips}">Replacement Grips</a>
+    <a data-th-href="@{/balls}">Tennis Balls</a>
+    <a data-th-href="@{/shoes}">Shoes</a>
+    
+    <form data-th-action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+  </div>
+<!--</nav>-->
+    
         <h1 data-th-inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
-        
+
+    </div>
     </body>
 </html>

@@ -1,11 +1,36 @@
 body{
 	background-color:lightgray;
+	margin:0px;
 }
 
 /*.wrapper{
 }*/
 
 .navigationbar{
+    overflow: hidden;
+    background-color: black;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+   height:50px;
+}
+
+.navigationbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigationbar a:hover {
+    text-decoration: none;
+    color:lightgray;
+}
+
+.navigationbar form{
+    margin-top:15px;
 }
 
 p.enter {
@@ -15,8 +40,6 @@ p.enter {
   line-height:60px;
   margin-left:28px;
   margin-top:70px;
-
-
   color:darkgreen;
   text-decoration:none;
 }
@@ -68,7 +91,7 @@ p.enter:hover {
   width: 298px;
 }
 
-input[type="password"], input[type="text"] {
+.login input[type="password"], .login input[type="text"] {
  center left no-repeat; 
  linear-gradient(top, #d6d7d7, #dee0e0);
   border: 1px solid #a1a3a3;
@@ -83,12 +106,12 @@ input[type="password"], input[type="text"] {
   width: 240px;
 }
 
-input[type="password"]:focus, input[type="text"]:focus {
+.login input[type="password"]:focus, .login input[type="text"]:focus {
   box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
   outline: 0;
 }
 
-input[type="submit"] {
+.login input[type="submit"] {
   width:240px;
   height:35px;
   display:block;
@@ -112,7 +135,7 @@ input[type="submit"] {
   box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #497a78, 0px 10px 5px #999;
 }
 
-input[type="submit"]:active {
+.login input[type="submit"]:active {
   top:3px;
   box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d, 0px 5px 3px #999;
 }

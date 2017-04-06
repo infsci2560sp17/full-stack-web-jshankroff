@@ -2,9 +2,24 @@
 <html>
     <head>
         <title>Balls</title>
+                <link data-th-href="@{styles/style.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Balls!</h1>
+
+  <div class="navigationbar">
+    <a data-th-href="@{/hello}">Home</a>
+    <a data-th-href="@{/rackets}">Rackets</a>
+    <a data-th-href="@{/strings}">Strings</a>
+    <a data-th-href="@{/overgrips}">Overgrips</a>
+    <a data-th-href="@{/replacementgrips}">Replacement Grips</a>
+    <a data-th-href="@{/balls}">Tennis Balls</a>
+    <a data-th-href="@{/shoes}">Shoes</a>
+    
+    <form data-th-action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+  </div>
 
         <div>
             <table style="border: 1px solid black">
@@ -34,9 +49,9 @@
             <input type="radio" name="ballType" value="Penn" /> Penn<br />
             <input type="submit" value="Add Ball"/>
         </form>
-            <form data-th-action="@{/balls/delete}" name="deleteBallForm" method="delete">
-            <input type="submit" value="Delete Ball"/>
-            </form>
+<!--<form data-th-object="${balls}" data-th-action="@{/balls/{id}(id=${balls.id})}" data-th-method="delete">
+                            <input type="submit" value="delete" />
+</form>-->
         <hr />       
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>

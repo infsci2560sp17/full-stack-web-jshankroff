@@ -2,9 +2,25 @@
 <html>
     <head>
         <title>Overgrips</title>
+                <link data-th-href="@{styles/style.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Overgrips!</h1>
+
+  <div class="navigationbar">
+    <a data-th-href="@{/hello}">Home</a>
+    <a data-th-href="@{/rackets}">Rackets</a>
+    <a data-th-href="@{/strings}">Strings</a>
+    <a data-th-href="@{/overgrips}">Overgrips</a>
+    <a data-th-href="@{/replacementgrips}">Replacement Grips</a>
+    <a data-th-href="@{/balls}">Tennis Balls</a>
+    <a data-th-href="@{/shoes}">Shoes</a>
+    
+    <form data-th-action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+  </div>
+
 
         <div>
             <table style="border: 1px solid black">
