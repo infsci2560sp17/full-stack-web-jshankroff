@@ -1,18 +1,55 @@
+html{
+    height:100%;
+}
 body{
-	background-color:lightgray;
-	margin:0px;
+	background-color:#f4f4f4;
+	margin:0;
+	
+	  position: relative;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 
-/*.wrapper{
-}*/
+#wrapper{
+    height:100%
+}
+
+.navigationbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navigationbar li {
+    float: left;
+}
+
+.navigationbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigationbar li a:hover {
+    background-color: #111;
+}
+
+.active{
+    background-color: #111;
+}
 
 .navigationbar{
     overflow: hidden;
-    background-color: black;
+    background-color: #2e2e2e;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-   height:50px;
+   /*height:50px;*/
+    box-shadow: 0 0 10px #000;
 }
 
 .navigationbar a {
@@ -29,8 +66,13 @@ body{
     color:lightgray;
 }
 
+
 .navigationbar form{
-    margin-top:15px;
+    text-height:30;
+    text-align:center;
+    margin-top:13px;
+    float:right;
+    margin-right:10px;
 }
 
 p.enter {
@@ -51,8 +93,6 @@ div.circle {
   background-color:lightgreen;
   cursor:pointer;
   text-decoration:none;
-
-
 }
 
 .circle {
@@ -67,6 +107,7 @@ div.circle {
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count:
     infinite;
+    text-decoration:none;
 }
 
 .circle:hover {
@@ -138,4 +179,158 @@ p.enter:hover {
 .login input[type="submit"]:active {
   top:3px;
   box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d, 0px 5px 3px #999;
+}
+
+.contentleft{
+    margin-top:50px;
+    padding-left:15px;
+}
+
+.footer-distributed{
+	background-color: #2e2e2e;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 20px 50px;
+
+
+	  position: absolute;
+	  	  bottom: 0;
+
+
+
+}
+
+.footer-left{
+
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;
+}
+
+
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
 }

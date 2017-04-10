@@ -2,25 +2,31 @@
 <html>
     <head>
         <title>Balls</title>
-                <link data-th-href="@{styles/style.css}" rel="stylesheet" type="text/css"/>
+                <link data-th-href="@{/styles/style.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Balls!</h1>
+
+<div id="wrapper">
 
   <div class="navigationbar">
-    <a data-th-href="@{/hello}">Home</a>
-    <a data-th-href="@{/rackets}">Rackets</a>
-    <a data-th-href="@{/strings}">Strings</a>
-    <a data-th-href="@{/overgrips}">Overgrips</a>
-    <a data-th-href="@{/replacementgrips}">Replacement Grips</a>
-    <a data-th-href="@{/balls}">Tennis Balls</a>
-    <a data-th-href="@{/shoes}">Shoes</a>
+  <ul>
+    <li><a data-th-href="@{/hello}">Home</a></li>
+    <li><a data-th-href="@{/rackets}">Rackets</a></li>
+   <li> <a data-th-href="@{/strings}">Strings</a></li>
+   <li> <a data-th-href="@{/overgrips}">Overgrips</a></li>
+    <li><a data-th-href="@{/replacementgrips}">Replacement Grips</a></li>
+    <li><a data-th-href="@{/balls}" style="color:#CC885E;" class="active">Tennis Balls</a></li>
+    <li><a data-th-href="@{/shoes}">Shoes</a></li>
     
     <form data-th-action="@{/logout}" method="post">
         <input type="submit" value="Sign Out"/>
     </form>
+    </ul>
   </div>
 
+<div class="contentleft">
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Balls!</h1>
+        
         <div>
             <table style="border: 1px solid black">
                 <tr>
@@ -35,6 +41,7 @@
                 </tr>
             </table>
         </div>
+    
         
         <hr />
         Add Ball<br />
@@ -49,12 +56,77 @@
             <input type="radio" name="ballType" value="Penn" /> Penn<br />
             <input type="submit" value="Add Ball"/>
         </form>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nibh sit amet mi ultricies malesuada volutpat eu felis. Fusce at ligula ligula. Mauris aliquam interdum suscipit. Cras faucibus feugiat sem eget maximus. Nulla commodo urna et ipsum tincidunt sodales. Nunc blandit nisl ut metus volutpat bibendum. Fusce est felis, lacinia a purus eget, interdum eleifend quam. Phasellus metus est, sollicitudin vitae tincidunt a, pellentesque eget erat.
+
+Vivamus ultrices mauris a sollicitudin dignissim. Ut quis hendrerit lectus, id blandit dolor. Morbi quam dui, commodo condimentum nisi non, vehicula sagittis nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum at ultricies dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non tincidunt felis, sed ultricies urna.
+
+Sed consectetur at ante egestas rhoncus. Sed nisl massa, mattis et augue sit amet, faucibus tempus orci. In velit felis, ultricies sit amet dignissim eget, aliquam sed sem. Proin venenatis volutpat lacus vitae ultricies. Mauris neque nulla, facilisis a hendrerit ac, volutpat ut ipsum. Proin elit augue, viverra in nulla ac, consequat consequat nibh. Vivamus porttitor id diam vitae cursus. Nulla turpis tortor, iaculis non purus ut, vulputate lobortis est. Suspendisse vulputate nulla id blandit cursus. In laoreet leo id leo semper faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Praesent lectus libero, ullamcorper tempor urna vitae, vehicula elementum lorem. Pellentesque porta pretium justo, non ultricies magna fermentum quis. Quisque luctus nulla at facilisis congue. Vivamus ut pulvinar odio, quis dapibus purus. Duis ac mi lectus. Sed sed lacus varius, finibus risus et, eleifend nibh. Vivamus faucibus dictum nunc, et mollis purus viverra vel. Quisque blandit, leo quis scelerisque vehicula, nibh lectus convallis purus, ut volutpat urna dui in neque. Fusce suscipit dui sit amet arcu ultricies mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam viverra vel velit in accumsan. Donec auctor ligula in ligula laoreet, nec euismod nunc finibus. Donec finibus luctus sapien, vitae eleifend mi suscipit sit amet. Aliquam et augue auctor, eleifend ligula a, consequat metus. Praesent hendrerit lectus vel odio sodales tincidunt. Proin volutpat justo non justo lobortis, nec tempor dolor lobortis.
+
+Suspendisse ullamcorper eget quam non sodales. Etiam nulla purus, efficitur eu convallis sollicitudin, aliquet et nisi. Integer leo neque, tincidunt vel tempor a, dictum lacinia dui. Vivamus pulvinar risus iaculis nunc convallis, fringilla scelerisque tortor imperdiet. Mauris mollis, purus quis congue faucibus, orci massa imperdiet metus, at pretium leo quam non libero. In vestibulum, nunc pretium maximus sodales, orci lacus iaculis lorem, ac sagittis enim augue ac sapien. Praesent venenatis quam non enim eleifend rhoncus. Phasellus suscipit felis a varius volutpat.
+        
 <!--<form data-th-object="${balls}" data-th-action="@{/balls/{id}(id=${balls.id})}" data-th-method="delete">
                             <input type="submit" value="delete" />
 </form>-->
-        <hr />       
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
+</div><!--end contentleft-->
+        <hr /> 
+        
+        <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+
+				<p class="footer-links">
+					<a data-th-href="@{/hello}">Home</a>
+					·
+					<a data-th-href="@{/rackets}">Rackets</a>
+					·
+					<a data-th-href="@{/strings}">Strings</a>
+					·
+					<a data-th-href="@{/overgrips}">Overgrips</a>
+					·
+					<a data-th-href="@{/replacementgrips}">Replacement Grips</a>
+					·
+					<a data-th-href="@{/balls}">Balls</a>
+                  ·
+					<a data-th-href="@{/shoes}">Shoes</a>
+					</p>
+				
+				<p class="footer-company-name">© 2017 TennisCollab. All Rights Reserved.</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Pittsburgh PA, 15213 </span> Pennsylvania, United States</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>Phone: 123 456 7890</p>
+                    
+				</div>
+
+				<div>
+					<i class="email"></i>
+					<p><a href="#">Email: tenniscollab@email.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About TennisCollab</span>
+					TennisCollab is a web application where users can log in and collaborate about all thing tennis!
+				</p>
+			</div>
+
+		</footer>
+        
+</div>
     </body>
 </html>
