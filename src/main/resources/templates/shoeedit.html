@@ -7,9 +7,28 @@ and open the template in the editor.
 <html>
     <head>
         <title>Edit Tennis Shoes</title>
-
+                <link data-th-href="@{/styles/style.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+    <div id="wrapper">
+    
+          <div class="navigationbar">
+  <ul>
+    <li><a data-th-href="@{/hello}">Home</a></li>
+    <li><a data-th-href="@{/rackets}">Rackets</a></li>
+   <li> <a data-th-href="@{/strings}">Strings</a></li>
+   <li> <a data-th-href="@{/overgrips}">Overgrips</a></li>
+    <li><a data-th-href="@{/replacementgrips}">Replacement Grips</a></li>
+    <li><a data-th-href="@{/balls}">Tennis Balls</a></li>
+    <li><a data-th-href="@{/shoes}" style="color:#CC885E;" class="active">Shoes</a></li>
+    
+    <form data-th-action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+    </ul>
+  </div>
+    
+          <div class="contentleft">
         Edit Shoes<br />
         <form 
             data-th-action="@{/shoes/edit/{id}(id=${shoe.id})}" 
@@ -34,6 +53,7 @@ and open the template in the editor.
         <div>
 
         </div>
-        
+        </div><!--end content left-->
+        </div>
     </body>
 </html>
