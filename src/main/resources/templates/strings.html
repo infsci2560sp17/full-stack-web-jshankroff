@@ -37,6 +37,11 @@
                     <td data-th-text="${string.id}"></td>
                     <td data-th-text="${string.title}"></td>
                     <td data-th-text="${string.stringType}"></td>
+                    <td><a data-th-href="@{/strings/edit/{id}(id=${string.id})}">edit</a></td>
+                    <td><form data-th-object="${string}" data-th-action="@{/strings/{id}(id=${string.id})}" data-th-method="delete">
+                        <input type="submit" value="delete" />
+                    </form>
+                    </td>
                 </tr>
             </table>
         </div>

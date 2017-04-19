@@ -35,13 +35,18 @@ public class BallController {
         return new ModelAndView("balls", "balls", repository.findAll());
     }
     
+    @RequestMapping(value = "balls/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("balls", "balls", repository.findOne(id));
+    }
+    
     @RequestMapping(value = "balls/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid TennisBalls tennisballs, BindingResult result) {
         repository.save(tennisballs);
         return new ModelAndView("balls", "balls", repository.findAll());
     }
 
-@RequestMapping(value = "balls/{id}", 
+    @RequestMapping(value = "balls/{id}", 
             method = RequestMethod.DELETE, 
             consumes="application/x-www-form-urlencoded", 
             produces = "application/json")

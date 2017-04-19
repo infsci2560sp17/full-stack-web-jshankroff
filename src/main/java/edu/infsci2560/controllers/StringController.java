@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  *
@@ -34,9 +35,23 @@ public class StringController {
         return new ModelAndView("strings", "strings", repository.findAll());
     }
     
+    @RequestMapping(value = "strings/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("strings", "strings", repository.findOne(id));
+    }
+    
     @RequestMapping(value = "strings/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid TennisStrings tennisstrings, BindingResult result) {
         repository.save(tennisstrings);
+        return new ModelAndView("strings", "strings", repository.findAll());
+    }
+    
+    @RequestMapping(value = "strings/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid TennisStrings tennisstrings, BindingResult result) {
+        repository.delete(tennisstrings);
         return new ModelAndView("strings", "strings", repository.findAll());
     }
     

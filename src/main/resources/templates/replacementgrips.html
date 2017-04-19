@@ -35,6 +35,11 @@
                     <td data-th-text="${replacementgrip.id}"></td>
                     <td data-th-text="${replacementgrip.title}"></td>
                     <td data-th-text="${replacementgrip.replacementgripType}"></td>
+                    <td><a data-th-href="@{/replacementgrips/edit/{id}(id=${replacementgrip.id})}">edit</a></td>
+                    <td><form data-th-object="${replacementgrip}" data-th-action="@{/replacementgrips/{id}(id=${replacementgrip.id})}" data-th-method="delete">
+                        <input type="submit" value="delete" />
+                    </form>
+                    </td>
                 </tr>
             </table>
         </div>

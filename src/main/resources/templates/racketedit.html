@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Edit Tennis Rackets</title>
+
+    </head>
+    <body>
+        Edit Rackets<br />
+        <form 
+            data-th-action="@{/rackets/edit/{id}(id=${racket.id})}" 
+            data-th-object="${racket}" 
+            data-th-method="put" 
+            role="form">
+            Id: <span data-th-utext="${racket.id}"/><br />
+            Title: <input type="text" name="title" data-th-value="${racket.title}" /><br />
+            Racket Type:<br />
+            <div data-th-each="elem: ${T(edu.infsci2560.models.TennisRackets.RacketType).values()}">
+                <input type="radio" 
+                       data-th-name="racketType" 
+                       data-th-value="${elem.name()}" 
+                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.TennisRackets.RacketType).valueOf(racket.racketType)}">
+                    <span data-th-utext="${elem.name()}" />
+                </input>
+            </div>
+            <input type="submit" value="Update Racket"/><br />
+        </form>
+                
+        <br />
+        <div>
+
+        </div>
+        
+    </body>
+</html>

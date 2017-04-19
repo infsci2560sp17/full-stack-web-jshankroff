@@ -1,7 +1,7 @@
 package edu.infsci2560.controllers;
 
-import edu.infsci2560.models.TennisBalls;
-import edu.infsci2560.repositories.BallRepository;
+import edu.infsci2560.models.TennisReplacementgrips;
+import edu.infsci2560.repositories.ReplacementgripRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,27 +17,27 @@ import org.springframework.data.domain.PageRequest;
  * @author jshankroff
  */
 @Controller
-public class BallEdit {
+public class ReplacementgripEdit {
     @Autowired
-    private BallRepository ballRepository;
+    private ReplacementgripRepository replacementgripRepository;
 
     
-    @RequestMapping(value = "balls/edit/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "replacementgrips/edit/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) {    
-        ModelAndView mv = new ModelAndView("balledit");
-        TennisBalls tennisballs = ballRepository.findOne(id);
-        mv.addObject("ball", tennisballs);
+        ModelAndView mv = new ModelAndView("replacementgripedit");
+        TennisReplacementgrips tennisreplacementgrips = replacementgripRepository.findOne(id);
+        mv.addObject("replacementgrip", tennisreplacementgrips);
 //        mv.addObject("ratings", ratingRepository.findAll());
 
         return mv;
     }
     
-    @RequestMapping(value = "balls/edit/{id}", 
+    @RequestMapping(value = "replacementgrips/edit/{id}", 
             method = RequestMethod.PUT, 
             consumes="application/x-www-form-urlencoded", 
             produces = "application/json")
-    public String update( @Valid TennisBalls tennisballs, BindingResult result) {
-        ballRepository.save(tennisballs);
-        return "redirect:/balls";
+    public String update( @Valid TennisReplacementgrips tennisreplacementgrips, BindingResult result) {
+        replacementgripRepository.save(tennisreplacementgrips);
+        return "redirect:/replacementgrips";
     }        
 }

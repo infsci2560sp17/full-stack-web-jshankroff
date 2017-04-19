@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Edit Tennis Balls</title>
+        <title>Edit Tennis Replacementgrips</title>
                 <link data-th-href="@{/styles/style.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
@@ -29,24 +29,24 @@ and open the template in the editor.
   </div>
   
   <div class="contentleft">
-        Edit Balls<br />
+        Edit Replacementgrips<br />
         <form 
-            data-th-action="@{/balls/edit/{id}(id=${ball.id})}" 
-            data-th-object="${ball}" 
+            data-th-action="@{/replacementgrips/edit/{id}(id=${replacementgrip.id})}" 
+            data-th-object="${replacementgrip}" 
             data-th-method="put" 
             role="form">
-            Id: <span data-th-utext="${ball.id}"/><br />
-            Title: <input type="text" name="title" data-th-value="${ball.title}" /><br />
-            Ball Type:<br />
-            <div data-th-each="elem: ${T(edu.infsci2560.models.TennisBalls.BallType).values()}">
+            Id: <span data-th-utext="${replacementgrip.id}"/><br />
+            Title: <input type="text" name="title" data-th-value="${replacementgrip.title}" /><br />
+            Replacementgrip Type:<br />
+            <div data-th-each="elem: ${T(edu.infsci2560.models.TennisReplacementgrips.ReplacementgripType).values()}">
                 <input type="radio" 
-                       data-th-name="ballType" 
+                       data-th-name="replacementgripType" 
                        data-th-value="${elem.name()}" 
-                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.TennisBalls.BallType).valueOf(ball.ballType)}">
+                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.TennisReplacementgrips.ReplacementgripType).valueOf(replacementgrip.replacementgripType)}">
                     <span data-th-utext="${elem.name()}" />
                 </input>
             </div>
-            <input type="submit" value="Update Ball"/><br />
+            <input type="submit" value="Update Replacementgrip"/><br />
         </form>
                 
         <br />

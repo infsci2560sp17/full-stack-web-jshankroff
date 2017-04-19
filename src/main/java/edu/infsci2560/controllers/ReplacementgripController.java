@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  *
@@ -34,9 +35,23 @@ public class ReplacementgripController {
         return new ModelAndView("replacementgrips", "replacementgrips", repository.findAll());
     }
     
+    @RequestMapping(value = "replacementgrips/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("replacementgrips", "replacementgrips", repository.findOne(id));
+    }
+    
     @RequestMapping(value = "replacementgrips/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid TennisReplacementgrips tennisreplacementgrips, BindingResult result) {
         repository.save(tennisreplacementgrips);
+        return new ModelAndView("replacementgrips", "replacementgrips", repository.findAll());
+    }
+    
+    @RequestMapping(value = "replacementgrips/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid TennisReplacementgrips tennisreplacementgrips, BindingResult result) {
+        repository.delete(tennisreplacementgrips);
         return new ModelAndView("replacementgrips", "replacementgrips", repository.findAll());
     }
     

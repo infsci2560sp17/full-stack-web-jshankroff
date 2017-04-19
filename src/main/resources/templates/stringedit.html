@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Edit Tennis Balls</title>
+        <title>Edit Tennis Strings</title>
                 <link data-th-href="@{/styles/style.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
@@ -29,24 +29,24 @@ and open the template in the editor.
   </div>
   
   <div class="contentleft">
-        Edit Balls<br />
+        Edit Strings<br />
         <form 
-            data-th-action="@{/balls/edit/{id}(id=${ball.id})}" 
-            data-th-object="${ball}" 
+            data-th-action="@{/strings/edit/{id}(id=${string.id})}" 
+            data-th-object="${string}" 
             data-th-method="put" 
             role="form">
-            Id: <span data-th-utext="${ball.id}"/><br />
-            Title: <input type="text" name="title" data-th-value="${ball.title}" /><br />
-            Ball Type:<br />
-            <div data-th-each="elem: ${T(edu.infsci2560.models.TennisBalls.BallType).values()}">
+            Id: <span data-th-utext="${string.id}"/><br />
+            Title: <input type="text" name="title" data-th-value="${string.title}" /><br />
+            String Type:<br />
+            <div data-th-each="elem: ${T(edu.infsci2560.models.TennisStrings.StringType).values()}">
                 <input type="radio" 
-                       data-th-name="ballType" 
+                       data-th-name="stringType" 
                        data-th-value="${elem.name()}" 
-                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.TennisBalls.BallType).valueOf(ball.ballType)}">
+                       data-th-checked="${elem} eq ${T(edu.infsci2560.models.TennisStrings.StringType).valueOf(string.stringType)}">
                     <span data-th-utext="${elem.name()}" />
                 </input>
             </div>
-            <input type="submit" value="Update Ball"/><br />
+            <input type="submit" value="Update String"/><br />
         </form>
                 
         <br />

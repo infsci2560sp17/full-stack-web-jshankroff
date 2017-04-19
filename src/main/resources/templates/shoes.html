@@ -33,10 +33,15 @@
                     <th>Name</th>
                     <th>Shoe Type</th>
                 </tr>                
-                <tr data-th-each="racket : ${shoes}">
+                <tr data-th-each="shoe : ${shoes}">
                     <td data-th-text="${shoe.id}"></td>
                     <td data-th-text="${shoe.title}"></td>
                     <td data-th-text="${shoe.shoeType}"></td>
+                    <td><a data-th-href="@{/shoes/edit/{id}(id=${shoe.id})}">edit</a></td>
+                    <td><form data-th-object="${shoe}" data-th-action="@{/shoes/{id}(id=${shoe.id})}" data-th-method="delete">
+                        <input type="submit" value="delete" />
+                    </form>
+                    </td>
                 </tr>
             </table>
         </div>
