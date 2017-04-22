@@ -14,6 +14,30 @@ body{
     height:100%
 }
 
+.wrapper1{
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+td {
+    text-align: left;
+    padding: 8px;
+    color:gray;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: darkgray}
+
 .navigationbar ul {
     list-style-type: none;
     margin: 0;
@@ -196,7 +220,7 @@ p.enter:hover {
 	padding: 20px 50px;
 
 
-	  position: absolute;
+
 	  	  bottom: 0;
 
 

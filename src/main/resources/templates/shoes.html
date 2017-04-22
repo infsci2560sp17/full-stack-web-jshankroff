@@ -27,11 +27,13 @@
 <div class="contentleft">
         <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Tennis Shoes!</h1>
         <div>
-            <table style="border: 1px solid black">
+            <table>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
                     <th>Shoe Type</th>
+                    <th>Edit Selection</th>
+                    <th>Delete Selection</th>
                 </tr>                
                 <tr data-th-each="shoe : ${shoes}">
                     <td data-th-text="${shoe.id}"></td>

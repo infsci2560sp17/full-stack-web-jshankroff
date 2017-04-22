@@ -3,6 +3,8 @@
     <head>
         <title>Index</title>
 <link data-th-href="@{/styles/style.css}" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
     </head>
     <body>
     
@@ -29,61 +31,37 @@
 
 <div class="contentleft">
     <h1 data-th-inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+    
+<div class="button">
+    <input type="button" id="lesen" value="Lesen!" />
 </div>
 
-        <footer class="footer-distributed">
+<div class="text">
+    Lorem Ipsum <br />
+</div>
 
-			<div class="footer-left">
+<script>
+$(document).ready(function() {
+    $("#lesen").click(function() {
+        $(".text").load("welcome.txt", function(){
+            alert("Done Loading");
+        });
+   }); 
+}); 
+</script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").load(/welcome.txt);
+    });
+});
+</script>
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get External Content</button>
+</div>
 
 
-				<p class="footer-links">
-					<a data-th-href="@{/hello}">Home</a>
-					·
-					<a data-th-href="@{/rackets}">Rackets</a>
-					·
-					<a data-th-href="@{/strings}">Strings</a>
-					·
-					<a data-th-href="@{/overgrips}">Overgrips</a>
-					·
-					<a data-th-href="@{/replacementgrips}">Replacement Grips</a>
-					·
-					<a data-th-href="@{/balls}">Balls</a>
-                  ·
-					<a data-th-href="@{/shoes}">Shoes</a>
-					</p>
-				
-				<p class="footer-company-name">© 2017 TennisCollab. All Rights Reserved.</p>
-			</div>
-
-			<div class="footer-center">
-
-				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span>Pittsburgh PA, 15213 </span> Pennsylvania, United States</p>
-				</div>
-
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>Phone: 123 456 7890</p>
-                    
-				</div>
-
-				<div>
-					<i class="email"></i>
-					<p><a href="#">Email: tenniscollab@email.com</a></p>
-				</div>
-
-			</div>
-
-			<div class="footer-right">
-
-				<p class="footer-company-about">
-					<span>About TennisCollab</span>
-					TennisCollab is a web application where users can log in and collaborate about all thing tennis!
-				</p>
-			</div>
-
-		</footer>
 
     </div>
     </body>
