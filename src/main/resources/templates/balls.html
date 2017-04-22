@@ -49,11 +49,11 @@
             </table>
         </div>
     
-        
-        <hr />
-        Add Ball<br />
+        <div class="pageform">
+
+        <h2>Add Ball</h2>
         <form data-th-action="@{/balls/add}" name="addBallForm" method="post">
-            Title: <input type="text" name="title" /><br />
+            Title: <input type="text" placeholder="Title" name="title" /><br />
             Ball Type:<br />
             <input type="radio" name="ballType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="ballType" value="Wilson" /> Wilson<br />
@@ -63,14 +63,15 @@
             <input type="radio" name="ballType" value="Penn" /> Penn<br />
             <input type="submit" value="Add Ball"/>
         </form>
+        </div>
 
 <!--<form data-th-object="${balls}" data-th-action="@{/balls/{id}(id=${balls.id})}" data-th-method="delete">
                             <input type="submit" value="delete" />
 </form>-->
 </div><!--end contentleft-->
-        <hr /> 
+
         
-<div class="footerer">TennisCollab 2017</div>
+
         
 </div>
     </body>

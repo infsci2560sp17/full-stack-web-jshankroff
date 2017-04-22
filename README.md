@@ -37,11 +37,11 @@ TODO : Modify to match your project specific Travis Build
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+TODO : please provide a description of your landing page inluding a screen shot ![](https://cloud.githubusercontent.com/assets/25062496/25307923/d58f7138-2777-11e7-888e-85e6a6bfc298.png)
 
 ### User Input Form
 
-This user input form is a login.  The user places a username and password into the correct fields to log in to the web application![](https://cloud.githubusercontent.com/assets/25062496/24326899/d5a4f20e-118f-11e7-9c06-7ce5887cb8cf.png)
+This user input form is a login.  The user places a username and password into the correct fields to log in to the web application![](https://cloud.githubusercontent.com/assets/25062496/25307925/fcb55c1e-2777-11e7-9233-db5764437429.png)
 
 ## API
 

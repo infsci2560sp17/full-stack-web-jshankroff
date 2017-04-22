@@ -1,1 +1,1 @@
-<b>Welcome to the TennisCollab web application! </b>
+<h2>Welcome to the TennisCollab web application! </h2><h4>This application is a place where tennis players, or any sports fans can collaborate about all things tennis!</h4>
