@@ -36,7 +36,7 @@
 
 ### Landing Page
 
-To enter the site, the user would have to click on the green circle, which is supposed to resemble a tennis ball! [](https://cloud.githubusercontent.com/assets/25062496/25307923/d58f7138-2777-11e7-888e-85e6a6bfc298.png)
+To enter the site, the user would have to click on the green circle, which is supposed to resemble a tennis ball![](https://cloud.githubusercontent.com/assets/25062496/25307923/d58f7138-2777-11e7-888e-85e6a6bfc298.png)
 
 ### User Input Form
 
