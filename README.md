@@ -86,6 +86,26 @@ All known errors cause the resource to return HTTP error code header together wi
 
 None
 
+### API Method 2
+
+    POST rackets/add
+
+#### Response
+
+The above POST API would add a racket.
+
+#### Errors
+
+All known errors cause the resource to return HTTP error code header together with a JSON array containing at least 'status' and 'error' keys describing the source of error.
+
+- **404 Not Found** — The photo was not found.
+
+#### Example
+
+##### Request
+
+    POST rackets/add
+
 ## Technologies Used
 
 - [Spring Boot](https://projects.spring.io/spring-boot/) - Takes an opinionated view of building production-ready Spring applications.
