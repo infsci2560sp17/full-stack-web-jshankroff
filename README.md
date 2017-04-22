@@ -14,7 +14,6 @@
 
 ## Build status
 
-TODO : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-jshankroff)
 
 ## Changelog
@@ -37,7 +36,7 @@ TODO : Modify to match your project specific Travis Build
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://cloud.githubusercontent.com/assets/25062496/25307923/d58f7138-2777-11e7-888e-85e6a6bfc298.png)
+To enter the site, the user would have to click on the green circle, which is supposed to resemble a tennis ball! [](https://cloud.githubusercontent.com/assets/25062496/25307923/d58f7138-2777-11e7-888e-85e6a6bfc298.png)
 
 ### User Input Form
 
@@ -67,7 +66,8 @@ All known errors cause the resource to return HTTP error code header together wi
 
 ##### Request
 
-    POST /v1/photos/123456/tags
+    
+    GET rackets/2
 
 ##### Body
 
@@ -78,8 +78,7 @@ All known errors cause the resource to return HTTP error code header together wi
 
 ```json
 {
-    "photoId": 123456,
-    "tags": ["cute", "puppy"]
+    json{"id":2, "name":"Blade 16x19", "racketType":"Wilson"}
 }
 ```
 
@@ -88,8 +87,6 @@ All known errors cause the resource to return HTTP error code header together wi
 None
 
 ## Technologies Used
-
-TODO : List all technologies used in your project
 
 - [Spring Boot](https://projects.spring.io/spring-boot/) - Takes an opinionated view of building production-ready Spring applications.
 - [Thymleaf](http://www.thymeleaf.org/) - Thymeleaf is a modern server-side Java template engine for both web and standalone environments.
