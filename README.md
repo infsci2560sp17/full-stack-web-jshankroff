@@ -78,7 +78,7 @@ All known errors cause the resource to return HTTP error code header together wi
 
 ```json
 {
-    json{"id":2, "name":"Blade 16x19", "racketType":"Wilson"}
+    json {"id":2, "name":"Blade 16x19", "racketType":"Wilson"}
 }
 ```
 
