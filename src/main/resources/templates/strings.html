@@ -48,10 +48,10 @@
             </table>
         </div>
         
-        <hr />
-        Add String<br />
+        <div class="pageform">
+        <h2>Add String</h2>
         <form data-th-action="@{/strings/add}" name="addStringForm" method="post">
-            Title: <input type="text" name="title" /><br />
+            <input type="text" placeholder="Title" name="title" /><br />
             String Type:<br />
             <input type="radio" name="stringType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="stringType" value="Wilson" /> Wilson<br />
@@ -68,7 +68,7 @@
             <input type="radio" name="stringType" value="Gosen" /> Gosen<br />                
             <input type="submit" value="Add String"/>
         </form>
-        
+        </div>
         <hr />       
 </div>
 

@@ -49,10 +49,10 @@
             </table>
         
         
-        <hr />
-        Add Racket<br />
+        <div class="pageform">
+        <h2>Add Racket</h2>
         <form data-th-action="@{/rackets/add}" name="addRacketForm" method="post">
-            Title: <input type="text" name="title" /><br />
+            <input type="text" placeholder="Title" name="title" /><br />
             Racket Type:<br />
             <input type="radio" name="racketType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="racketType" value="Wilson" /> Wilson<br />
@@ -62,11 +62,10 @@
             <input type="radio" name="racketType" value="Prince" /> Prince<br />
             <input type="submit" value="Add Racket"/>
         </form>
+</div>
 
 
-        <div id="return">
-        </div>
-        <hr /> 
+ 
         </div>
 
 

@@ -48,10 +48,10 @@
             </table>
         </div>
         
-        <hr />
-        Add Shoe<br />
+        <div class="pageform">
+        <h2>Add Shoe</h2>
         <form data-th-action="@{/shoes/add}" name="addShoeForm" method="post">
-            Title: <input type="text" name="title" /><br />
+            <input type="text" placeholder="Title" name="title" /><br />
             Shoe Type:<br />
             <input type="radio" name="shoeType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="shoeType" value="Nike" /> Nike<br />
@@ -65,8 +65,8 @@
             <input type="radio" name="shoeType" value="KSwiss" /> K-Swiss<br />
             <input type="submit" value="Add Shoe"/>
         </form>
-        
-        <hr />  
+        </div>
+ 
         
         </div>
         

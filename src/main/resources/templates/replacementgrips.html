@@ -46,10 +46,10 @@
             </table>
         </div>
         
-        <hr />
-        Add Replacement grip<br />
+        <div class="pageform">
+        <h2>Add Replacement grip</h2>
         <form data-th-action="@{/replacementgrips/add}" name="addReplacementgripForm" method="post">
-            Title: <input type="text" name="title" /><br />
+            <input type="text" placeholder="Title" name="title" /><br />
             Replacement grip Type:<br />
             <input type="radio" name="replacementgripType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="replacementgripType" value="Wilson" /> Wilson<br />
@@ -63,8 +63,8 @@
             <input type="radio" name="replacementgripType" value="Prince" /> Gamma<br />
             <input type="submit" value="Add Replacement grip"/>
         </form>
-        
-        <hr />       
+        </div>
+      
 </div>
 
 

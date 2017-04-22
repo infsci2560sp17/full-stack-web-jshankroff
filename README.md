@@ -42,6 +42,10 @@ To enter the site, the user would have to click on the green circle, which is su
 
 This user input form is a login.  The user places a username and password into the correct fields to log in to the web application![](https://cloud.githubusercontent.com/assets/25062496/25307925/fcb55c1e-2777-11e7-9233-db5764437429.png)
 
+### Racket Page
+
+This is an example of the pages on the website where users can add, delete, or update their choices![](https://cloud.githubusercontent.com/assets/25062496/25309076/f4723f68-2790-11e7-96f0-24dedb18fce3.png)
+
 ## API
 
 ### API Method 1

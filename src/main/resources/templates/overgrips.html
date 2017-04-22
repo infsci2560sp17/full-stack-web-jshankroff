@@ -46,10 +46,10 @@
             </table>
 
         
-        <hr />
-        Add Overgrip<br />
+        <div class="pageform">
+        <h2>Add Overgrip</h2>
         <form data-th-action="@{/overgrips/add}" name="addOvergripForm" method="post">
-            Title: <input type="text" name="title" /><br />
+            <input type="text" placeholder="Title" name="title" /><br />
             Overgrip Type:<br />
             <input type="radio" name="overgripType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="overgripType" value="Wilson" /> Wilson<br />
@@ -62,8 +62,8 @@
             <input type="radio" name="overgripType" value="Prince" /> Volkl<br />
             <input type="submit" value="Add Overgrip"/>
         </form>
-
-        <hr /> 
+</div>
+        
         </div>
 
 
