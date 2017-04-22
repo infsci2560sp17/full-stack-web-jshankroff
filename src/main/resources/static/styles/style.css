@@ -4,14 +4,22 @@ html{
 body{
 	background-color:#f4f4f4;
 	margin:0;
-	
-	  position: relative;
-  padding-bottom: 6rem;
-  min-height: 100%;
+
+}
+
+.footerer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #2e2e2e;
+  color:#f4f4f4;
+  text-align: center;
 }
 
 #wrapper{
-    height:100%
+    height:100%;
 }
 
 .wrapper1{
@@ -35,8 +43,8 @@ td {
     color:gray;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
-tr:nth-child(odd){background-color: darkgray}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: darkgray;}
 
 .navigationbar ul {
     list-style-type: none;
@@ -73,7 +81,7 @@ tr:nth-child(odd){background-color: darkgray}
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
    /*height:50px;*/
-    box-shadow: 0 0 10px #000;
+
 }
 
 .navigationbar a {
@@ -218,17 +226,7 @@ p.enter:hover {
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 20px 50px;
-
-
-
-	  	  bottom: 0;
-
-
-
-}
-
-.footer-left{
-
+	bottom: 0;
 }
 
 .footer-distributed .footer-left,
