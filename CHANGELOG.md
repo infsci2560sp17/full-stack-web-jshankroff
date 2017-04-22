@@ -14,6 +14,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 - Modified CHANGELOG.md
 - Modified FullStackWebApplication.java
 - Added edit pages
+- Added landing page image with short description
+- Added Login page image with short description
+- Added Racket page image with short description
+- Modified API method 1
+- Added API method 2
 
 ## [1.4] - 2017-03-25
 ### Added
