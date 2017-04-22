@@ -4,6 +4,15 @@ html{
 body{
 	background-color:#f4f4f4;
 	margin:0;
+}
+
+.thebg{
+        background: url('http://2014.usopen.org/images/pics/misc/f_26AUG14_4873_matosevic.jpg');
+     width: 100%;
+     height:100%;
+}
+
+.thebg img{
 
 }
 
@@ -160,7 +169,7 @@ p.enter:hover {
   border: 1px solid #42464b;
   border-radius: 6px;
   height: 257px;
-  margin: 20px auto 0;
+  margin: 160px auto 0;
   width: 298px;
 }
 

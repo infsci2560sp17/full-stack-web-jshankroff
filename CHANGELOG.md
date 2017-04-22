@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 
+## [1.5] - 2017-04-22
+### Added
+- Implemented PUT method for all pages
+- Implemented DELETE method for all pages
+- Updated CSS
+- Updated HTML
+- Implemented jQuery AJAX call
+- Modified README.md
+- Modified CHANGELOG.md
+- Modified FullStackWebApplication.java
+- Added edit pages
+
 ## [1.4] - 2017-03-25
 ### Added
 - Created 5 additional entities

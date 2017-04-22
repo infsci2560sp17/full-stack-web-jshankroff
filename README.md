@@ -27,11 +27,11 @@ TODO : Modify to match your project specific Travis Build
 
 ## Key Features
 
-TODO : Please list key features of your project.
-
-* Key Feature 1
-* Key Feature 2
-* Key Feature N
+* User Login
+* RESTful Web Service
+* Users can add equipment
+* Users can update equipment 
+* Users can delete equipment
 
 ## Project Details
 
@@ -47,16 +47,15 @@ This user input form is a login.  The user places a username and password into t
 
 ### API Method 1
 
-    POST rackets/:id/tags
+    GET rackets/{id}
 
 #### Parameters
 
-- **id** _(required)_ — The racket ID to add tags for.
-- **tags** _(required)_ — Comma separated tags.
+- **id** _(required)_ — This API will return a racket for the given id.
 
 #### Response
 
-Returns a JSON object.
+Returns a JSON object with the racket id.
 
 #### Errors
 
@@ -86,16 +85,7 @@ All known errors cause the resource to return HTTP error code header together wi
 
 ##### XML Response
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<PhotoTags>
-    <photoId>123456</PhotoId>
-        <tags>
-            <tag>cute</tag>
-            <tag>puppy</tag>
-        </tags>
-</PhotoTags>
-```
+None
 
 ## Technologies Used
 
